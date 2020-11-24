@@ -1,0 +1,17 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Greeting</title>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <h1>Hello, world!</h1>
+            <p>This is web-site of holidays! You are welcome!!!</p>
+        </div>
+    </form>
+</body>
+</html>
