@@ -10,7 +10,8 @@
     <form id="form1" runat="server">
         <div>
             <h1>Hello! Today we have a lot of holiday as usual!</h1>
-            <%= ShowingTest()%>
+            <%= ShowingDateToday()%>
+            <%= ShowingHolidays()%>
             
         </div>
     </form>
