@@ -29,7 +29,7 @@ public partial class HolidaysPage : System.Web.UI.Page
     {
         var collection = database.GetCollection<Holiday>("holidays");
 
-        Holiday hol = new Holiday("1 holiday", DateTime.Parse("2020-11-28"));
+        Holiday hol = new Holiday("1 holiday", "1 holiday", DateTime.Parse("2020-11-30"));
 
         collection.InsertOne(hol);
     }
@@ -44,7 +44,7 @@ public partial class HolidaysPage : System.Web.UI.Page
 
         foreach (Holiday holToday in holidays)
         {
-            string request = "<p> " + holToday.name + "</p>";
+            string request = "<p> " + holToday.englishName + "</p>";
             html.Append(request);
         }
 
@@ -63,10 +63,9 @@ public partial class HolidaysPage : System.Web.UI.Page
 
         foreach (Holiday holToday in holidays)
         {
-            string request = holToday.name;
+            string request = holToday.englishName;
             html.Append(request);
         }
-
         return html.ToString();
     }
 

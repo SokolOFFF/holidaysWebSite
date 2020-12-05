@@ -11,10 +11,12 @@ public class Holiday
 {
     public ObjectId Id { get; set; }
     public DateTime date { get; set; }
-    public string name { get; set; }
-    public Holiday(string nam, DateTime dat)
+    public string englishName { get; set; }
+    public string russianName { get; set; }
+    public Holiday(string namE, string namR, DateTime dat)
     {
-        name = nam;
+        englishName = namE;
+        russianName = namR;
         date = dat;
     }
 }
