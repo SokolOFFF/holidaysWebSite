@@ -44,7 +44,7 @@ public partial class HolidaysPage : System.Web.UI.Page
 
         foreach (Holiday holToday in holidays)
         {
-            string request = "<p> " + holToday.englishName + "</p>";
+            string request = "<p > " + holToday.englishName + "</p>";
             html.Append(request);
         }
 
@@ -57,18 +57,18 @@ public partial class HolidaysPage : System.Web.UI.Page
         var collection = database.GetCollection<Holiday>("holidays");
         List<Holiday> holidays = new List<Holiday>();
 
-        DateTime today = DateTime.Today;
+        DateTime today = new DateTime(2020, DateTime.Today.Month, DateTime.Today.Day);
+
         var filter = new BsonDocument("date", today);
         holidays = collection.Find(filter).ToList();
 
         foreach (Holiday holToday in holidays)
         {
-            string request = holToday.englishName;
+            string request = "<p class='holiday'> " + holToday.englishName + " </p>";
             html.Append(request);
         }
         return html.ToString();
     }
-
 
     protected string ShowingDateToday()
     {
@@ -77,9 +77,9 @@ public partial class HolidaysPage : System.Web.UI.Page
         int day = today.Day;
         int month = today.Month;
 
-        string request = "<p> " + day.ToString() + "</p>";
+        string request = "<p class='date'> " + day.ToString() + "</p>";
         html.Append(request);
-        request = "<p> " + months[month-1] + "</p>";
+        request = "<p class='date'> " + months[month-1] + "</p>";
         html.Append(request);
         return html.ToString();
     }

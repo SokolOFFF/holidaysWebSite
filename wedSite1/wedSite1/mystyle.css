@@ -1,0 +1,53 @@
+﻿/*Для импорта шрифта текста*/
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
+@import url('https://fonts.googleapis.com/css?family=Dosis');
+
+body {
+    background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+    background-size: 400% 400%;
+    animation: animate 20s ease-in-out infinite; 
+    height: 50vw;
+    position: relative;
+}
+
+.holiday {
+    color: #E0FFFF;
+    font-family: Cambria;
+    font-size: 3em;
+}
+
+.greating {
+    color: #E0FFFF;
+    font-family: Cambria;
+    font-size: 4em;
+}
+
+.date {
+    color: #E0FFFF;
+    font-family: Cambria;
+    font-size: 2em;
+}
+
+img {
+    border: 5px solid #fff;
+    border-radius: 4px;
+    padding: 5px;
+    width: 150px;
+    font-family: Cambria;
+    width: 15vw;
+    height: 15vw;
+}
+
+@keyframes animate{
+    0%{
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}
